@@ -30,6 +30,8 @@
             android:layout_height="match_parent"
             android:elevation="0dp"
             android:text="@string/watch_now"
+            android:textColor="#D7CCC8"
+            tools:ignore="TextContrastCheck"
             tools:progressMax="100"
             tools:progressValue="50" />
 

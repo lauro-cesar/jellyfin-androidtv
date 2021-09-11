@@ -34,15 +34,17 @@
         android:id="@+id/channelImage"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/channelName"
-        android:scaleType="center" />
+        android:scaleType="center"
+        android:contentDescription="@string/channel_name" />
 
     <ImageView
+        android:id="@+id/favImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/favImage"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/channelImage"
+        android:contentDescription="@string/fav_description"
         android:scaleType="center"
         android:src="@drawable/ic_heart_red"
-        android:visibility="gone" />
+        android:visibility="invisible" />
 </RelativeLayout>

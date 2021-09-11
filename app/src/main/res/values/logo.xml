@@ -2,6 +2,6 @@
 <resources>
     <color name="logo_gradient_start">#AA5CC3</color>
     <color name="logo_gradient_stop">#00A4DC</color>
-    <color name="logo_background">#000B25</color>
-    <color name="logo_text">#FFFFFF</color>
+    <color name="logo_background">#ffffff</color>
+    <color name="logo_text">#000000</color>
 </resources>

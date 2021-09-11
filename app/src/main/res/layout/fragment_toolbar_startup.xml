@@ -12,10 +12,11 @@
         <ImageButton
             android:id="@+id/help"
             style="@style/Button.Icon"
-            android:layout_width="41dp"
+            android:layout_width="48dp"
             android:layout_height="41dp"
             android:contentDescription="@string/help"
-            android:src="@drawable/ic_help" />
+            android:src="@drawable/ic_help"
+            android:visibility="invisible" />
 
         <Space
             android:layout_width="8dp"
@@ -27,6 +28,7 @@
             android:layout_width="41dp"
             android:layout_height="41dp"
             android:contentDescription="@string/lbl_settings"
-            android:src="@drawable/ic_settings" />
+            android:src="@drawable/ic_settings"
+            android:visibility="invisible" />
     </LinearLayout>
 </org.jellyfin.androidtv.ui.shared.ToolbarView>

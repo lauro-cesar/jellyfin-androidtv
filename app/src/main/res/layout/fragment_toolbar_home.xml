@@ -12,38 +12,18 @@
         android:gravity="end"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/search"
-            style="@style/Button.Icon"
-            android:layout_width="41dp"
-            android:layout_height="41dp"
-            android:contentDescription="@string/lbl_search"
-            android:src="@drawable/ic_search" />
-
         <Space
             android:layout_width="8dp"
             android:layout_height="0dp" />
 
-        <ImageButton
-            android:id="@+id/settings"
-            style="@style/Button.Icon"
-            android:layout_width="41dp"
-            android:layout_height="41dp"
-            android:contentDescription="@string/lbl_settings"
-            android:src="@drawable/ic_settings" />
-
-        <Space
-            android:layout_width="8dp"
-            android:layout_height="0dp" />
-
-        <!-- Only one of the next 2 buttons should be shown at a time -->
         <FrameLayout
             android:id="@+id/switch_users_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:descendantFocusability="blocksDescendants"
-            android:focusable="true">
+            android:focusable="true"
+            android:visibility="invisible">
 
             <ImageButton
                 android:id="@+id/switch_users_icon"
@@ -64,5 +44,28 @@
                 android:tint="@null"
                 android:visibility="gone" />
         </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/settings"
+            style="@style/Button.Icon"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:contentDescription="@string/lbl_settings"
+            android:src="@drawable/ic_settings"
+            android:visibility="invisible" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="0dp" />
+
+        <!-- Only one of the next 2 buttons should be shown at a time -->
+        <ImageButton
+            android:id="@+id/search"
+            style="@style/Button.Icon"
+            android:layout_width="48dp"
+            android:layout_height="41dp"
+            android:contentDescription="@string/lbl_search"
+            android:src="@drawable/ic_search" />
+
     </LinearLayout>
 </org.jellyfin.androidtv.ui.shared.ToolbarView>

@@ -91,7 +91,8 @@
             app:layout_constraintEnd_toStartOf="@id/textClock"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" />
+            app:layout_constraintHorizontal_bias="0.0"
+            android:contentDescription="@string/descricao_logo" />
 
         <TextView
             android:id="@+id/item_title"

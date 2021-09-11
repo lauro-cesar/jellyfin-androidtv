@@ -49,7 +49,8 @@
                 style="@style/Button.Default"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/lbl_cancel" />
+                android:text="@string/lbl_cancel"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <Space
                 android:layout_width="8dp"
@@ -60,7 +61,8 @@
                 style="@style/Button.Default"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/lbl_ok" />
+                android:text="@string/lbl_ok"
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

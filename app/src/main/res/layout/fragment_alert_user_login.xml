@@ -19,7 +19,8 @@
         android:autofillHints="password"
         android:fontFamily="sans-serif"
         android:hint="@string/lbl_enter_user_pw"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/error"

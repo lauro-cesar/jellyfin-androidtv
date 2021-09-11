@@ -50,34 +50,36 @@
     </org.jellyfin.androidtv.ui.ObservableScrollView>
 
     <HorizontalScrollView
+        android:id="@+id/timelineHScroller"
         android:layout_width="match_parent"
         android:layout_height="30sp"
-        android:id="@+id/timelineHScroller"
         android:layout_above="@+id/programVScroller"
         android:layout_toEndOf="@+id/channelScroller"
-        android:focusable="false"
         android:background="@color/timeline_bg"
-        android:focusableInTouchMode="false">
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/timeline"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:id="@+id/timeline"
-            android:gravity="center_vertical" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal" />
     </HorizontalScrollView>
 
     <TextView
+        android:id="@+id/displayDate"
         android:layout_width="wrap_content"
         android:layout_height="30sp"
-        tools:text="Today"
-        android:id="@+id/displayDate"
         android:layout_above="@+id/programVScroller"
-        android:layout_toStartOf="@+id/timelineHScroller"
         android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/timelineHScroller"
         android:background="@color/timeline_bg"
         android:gravity="center"
-        android:textSize="14sp" />
+        android:textColor="#009688"
+        android:textSize="14sp"
+        tools:text="Today" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -86,7 +88,8 @@
         android:layout_above="@+id/timelineHScroller"
         android:layout_alignParentTop="true"
         app:tint="@color/black_opaque"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:contentDescription="TODO" />
 
     <org.jellyfin.androidtv.ui.ClockUserView
         android:layout_width="wrap_content"

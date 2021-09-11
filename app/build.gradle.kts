@@ -28,9 +28,16 @@ android {
 
 	compileOptions {
 		isCoreLibraryDesugaringEnabled = true
+		sourceCompatibility = JavaVersion.VERSION_1_8
+		targetCompatibility = JavaVersion.VERSION_1_8
 	}
 
 	buildTypes {
+		getByName("release") {
+			isDebuggable = false
+			multiDexEnabled = true
+			isMinifyEnabled = true
+		}
 		val release by getting {
 			isMinifyEnabled = false
 
@@ -62,6 +69,8 @@ android {
 		isAbortOnError = false
 		sarifReport = true
 	}
+	buildToolsVersion = "29.0.2"
+	ndkVersion = "20.0.5594570"
 }
 
 val versionTxt by tasks.registering {

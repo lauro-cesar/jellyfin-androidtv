@@ -23,8 +23,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/app_logo_description"
             android:scaleType="centerCrop"
-            android:src="@drawable/app_logo" />
+            android:src="@mipmap/logo_china"
+            tools:src="@mipmap/logo_china_round" />
     </LinearLayout>
 
     <LinearLayout

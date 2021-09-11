@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:autofillHints="username"
         android:hint="@string/lbl_ip_hint"
-        android:inputType="textUri" />
+        android:inputType="textUri"
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/error"

@@ -41,7 +41,7 @@ public class BrowseFolderFragment extends StdBrowseFragment {
     public void onCreate(Bundle savedInstanceState) {
         mFolder = serializer.getValue().DeserializeFromString(getActivity().getIntent().getStringExtra(Extras.Folder), BaseItemDto.class);
         if (MainTitle == null) MainTitle = mFolder.getName();
-        ShowBadge = false;
+        ShowBadge = true;
         if (mFolder.getCollectionType() != null) {
             switch (mFolder.getCollectionType()) {
                 case "movies":

@@ -9,6 +9,7 @@ import org.jellyfin.androidtv.ui.home.HomeFragment
 import org.jellyfin.androidtv.ui.home.HomeToolbarFragment
 import org.jellyfin.androidtv.ui.shared.BaseActivity
 import org.koin.android.ext.android.inject
+import org.jellyfin.androidtv.ui.livetv.TvManager
 
 class MainActivity : BaseActivity(R.layout.fragment_content_view) {
 	private val backgroundService: BackgroundService by inject<BackgroundService>()

@@ -28,11 +28,11 @@ class HomeFragmentBrowseRowDefRow(
 			QueryType.Views -> ItemRowAdapter(ViewQuery(), cardPresenter, rowsAdapter)
 			QueryType.SimilarSeries -> ItemRowAdapter(browseRowDef.similarQuery, QueryType.SimilarSeries, cardPresenter, rowsAdapter)
 			QueryType.SimilarMovies -> ItemRowAdapter(browseRowDef.similarQuery, QueryType.SimilarMovies, cardPresenter, rowsAdapter)
-			QueryType.Persons -> ItemRowAdapter(browseRowDef.personsQuery, browseRowDef.chunkSize, cardPresenter, rowsAdapter)
-			QueryType.LiveTvChannel -> ItemRowAdapter(browseRowDef.tvChannelQuery, 40, cardPresenter, rowsAdapter)
-			QueryType.LiveTvProgram -> ItemRowAdapter(browseRowDef.programQuery, cardPresenter, rowsAdapter)
-			QueryType.LiveTvRecording -> ItemRowAdapter(browseRowDef.recordingQuery, browseRowDef.chunkSize, cardPresenter, rowsAdapter)
-			QueryType.LiveTvRecordingGroup -> ItemRowAdapter(browseRowDef.recordingGroupQuery, cardPresenter, rowsAdapter)
+//			QueryType.Persons -> ItemRowAdapter(browseRowDef.personsQuery, browseRowDef.chunkSize, cardPresenter, rowsAdapter)
+//			QueryType.LiveTvChannel -> ItemRowAdapter(browseRowDef.tvChannelQuery, 40, cardPresenter, rowsAdapter)
+//			QueryType.LiveTvProgram -> ItemRowAdapter(browseRowDef.programQuery, cardPresenter, rowsAdapter)
+//			QueryType.LiveTvRecording -> ItemRowAdapter(browseRowDef.recordingQuery, browseRowDef.chunkSize, cardPresenter, rowsAdapter)
+//			QueryType.LiveTvRecordingGroup -> ItemRowAdapter(browseRowDef.recordingGroupQuery, cardPresenter, rowsAdapter)
 			else -> ItemRowAdapter(browseRowDef.query, browseRowDef.chunkSize, browseRowDef.preferParentThumb, browseRowDef.isStaticHeight, cardPresenter, rowsAdapter, browseRowDef.queryType)
 		}
 

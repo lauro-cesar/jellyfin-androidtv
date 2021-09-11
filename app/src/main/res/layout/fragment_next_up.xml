@@ -10,9 +10,10 @@
         android:id="@+id/logo"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31.5dp"
         android:layout_marginStart="56dp"
+        android:layout_marginTop="31.5dp"
         android:adjustViewBounds="true"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/app_logo" />
@@ -35,6 +36,7 @@
             android:id="@+id/image_container"
             android:layout_width="wrap_content"
             android:layout_height="145dp"
+            android:visibility="invisible"
             app:cardCornerRadius="?attr/cardRounding"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -47,6 +49,7 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:maxWidth="400dp"
+                android:visibility="invisible"
                 tools:src="@drawable/app_logo" />
         </androidx.cardview.widget.CardView>
 

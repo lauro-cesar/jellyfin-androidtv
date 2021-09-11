@@ -35,7 +35,7 @@
             style="@style/Widget.Jellyfin.Row.Header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_title" />
+            android:text="Hotel Fazenda China Park!" />
 
         <TextView
             android:id="@+id/welcome_content"
@@ -43,7 +43,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/welcome_content" />
+            android:text="@string/welcome_content"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/enter_server_address"
@@ -111,6 +112,7 @@
             android:layout_gravity="end"
             android:layout_marginTop="6dp"
             android:textColor="@color/lb_grey"
+            android:visibility="invisible"
             tools:text="App version" />
     </LinearLayout>
 </LinearLayout>

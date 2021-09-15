@@ -30,8 +30,9 @@
             android:background="@drawable/shape_card_image_background"
             android:contentDescription="@null"
             android:scaleType="centerCrop"
+            android:src="@mipmap/logo_china"
             lb:layout_viewType="main"
-            tools:src="@drawable/app_logo" />
+            tools:src="@mipmap/logo_china" />
 
         <ImageView
             android:id="@+id/favIcon"

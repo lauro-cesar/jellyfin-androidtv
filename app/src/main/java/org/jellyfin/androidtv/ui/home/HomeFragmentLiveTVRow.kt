@@ -24,16 +24,16 @@ class HomeFragmentLiveTVRow(
 		val header = HeaderItem(rowsAdapter.size().toLong(), activity.getString(R.string.pref_live_tv_cat))
 		val adapter = ArrayObjectAdapter(GridButtonPresenter())
 
-		// Live TV Guide button
-//		adapter.add(GridButton(TvApp.LIVE_TV_GUIDE_OPTION_ID, activity.getString(R.string.lbl_live_tv_guide), R.drawable.tile_port_guide))
-//		// Live TV Recordings button
-//		adapter.add(GridButton(TvApp.LIVE_TV_RECORDINGS_OPTION_ID, activity.getString(R.string.lbl_recorded_tv), R.drawable.tile_port_record))
-//		if (TvApp.getApplication()?.canManageRecordings() == true) {
-//			// Recording Schedule button
-//			adapter.add(GridButton(TvApp.LIVE_TV_SCHEDULE_OPTION_ID, activity.getString(R.string.lbl_schedule), R.drawable.tile_port_time))
-//			// Recording Series button
-//			adapter.add(GridButton(TvApp.LIVE_TV_SERIES_OPTION_ID, activity.getString(R.string.lbl_series), R.drawable.tile_port_series_timer))
-//		}
+
+		adapter.add(GridButton(TvApp.LIVE_TV_GUIDE_OPTION_ID, activity.getString(R.string.lbl_live_tv_guide), R.drawable.tile_port_guide))
+		// Live TV Recordings button
+		adapter.add(GridButton(TvApp.LIVE_TV_RECORDINGS_OPTION_ID, activity.getString(R.string.lbl_recorded_tv), R.drawable.tile_port_record))
+		if (TvApp.getApplication()?.canManageRecordings() == true) {
+			// Recording Schedule button
+			adapter.add(GridButton(TvApp.LIVE_TV_SCHEDULE_OPTION_ID, activity.getString(R.string.lbl_schedule), R.drawable.tile_port_time))
+			// Recording Series button
+			adapter.add(GridButton(TvApp.LIVE_TV_SERIES_OPTION_ID, activity.getString(R.string.lbl_series), R.drawable.tile_port_series_timer))
+		}
 
 		rowsAdapter.add(ListRow(header, adapter))
 	}

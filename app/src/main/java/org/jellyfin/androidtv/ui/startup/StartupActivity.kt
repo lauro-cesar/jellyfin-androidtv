@@ -19,8 +19,10 @@ import org.jellyfin.androidtv.TvApp
 import org.jellyfin.androidtv.auth.ServerRepository
 import org.jellyfin.androidtv.auth.SessionRepository
 import org.jellyfin.androidtv.ui.browsing.MainActivity
+import org.jellyfin.androidtv.ui.browsing.UserViewActivity
 import org.jellyfin.androidtv.ui.itemdetail.FullDetailsActivity
 import org.jellyfin.androidtv.ui.itemhandling.ItemLauncher
+import org.jellyfin.androidtv.ui.livetv.LiveTvGuideActivity
 import org.jellyfin.androidtv.ui.playback.MediaManager
 import org.jellyfin.androidtv.ui.startup.fragment.SelectServerFragment
 import org.jellyfin.androidtv.ui.startup.fragment.ServerFragment

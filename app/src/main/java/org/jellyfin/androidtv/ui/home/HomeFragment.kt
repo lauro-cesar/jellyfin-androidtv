@@ -1,5 +1,6 @@
 package org.jellyfin.androidtv.ui.home
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -12,13 +13,12 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.jellyfin.androidtv.TvApp
 import org.jellyfin.androidtv.constant.HomeSectionType
-import org.jellyfin.androidtv.ui.browsing.BrowseRowDef
-import org.jellyfin.androidtv.ui.browsing.IRowLoader
-import org.jellyfin.androidtv.ui.browsing.StdRowsFragment
+import org.jellyfin.androidtv.ui.browsing.*
 import org.jellyfin.androidtv.ui.playback.AudioEventListener
 import org.jellyfin.androidtv.ui.playback.MediaManager
 import org.jellyfin.androidtv.ui.presentation.CardPresenter
 import org.jellyfin.androidtv.ui.presentation.PositionableListRowPresenter
+import org.jellyfin.androidtv.ui.search.SearchActivity
 import org.jellyfin.androidtv.util.apiclient.callApi
 import org.jellyfin.apiclient.interaction.ApiClient
 import org.jellyfin.apiclient.model.entities.DisplayPreferences
@@ -37,13 +37,14 @@ class HomeFragment : StdRowsFragment(), AudioEventListener {
 	// Data
 	private val rows = mutableListOf<HomeFragmentRow>()
 	private var views: ItemsResult? = null
-	private var includeLiveTvRows: Boolean = false
+	private var includeLiveTvRows: Boolean = true
 
 	// Special rows
 	private val nowPlaying by lazy { HomeFragmentNowPlayingRow(requireActivity(), mediaManager) }
 	private val liveTVRow by lazy { HomeFragmentLiveTVRow(requireActivity(), get()) }
 
 	override fun onCreate(savedInstanceState: Bundle?) {
+
 		// Create adapter/presenter and set it to parent
 		mRowsAdapter = ArrayObjectAdapter(PositionableListRowPresenter())
 		mCardPresenter = CardPresenter()
@@ -53,13 +54,16 @@ class HomeFragment : StdRowsFragment(), AudioEventListener {
 
 		// Subscribe to Audio messages
 		mediaManager.addAudioEventListener(this)
+
+
+
+
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
-
-		// Make sure to focus the cards instead of the toolbar
 		ViewCompat.setFocusedByDefault(view, true)
+
 	}
 
 	override fun onResume() {
@@ -79,7 +83,6 @@ class HomeFragment : StdRowsFragment(), AudioEventListener {
 
 	override fun onDestroy() {
 		super.onDestroy()
-
 		mediaManager.removeAudioEventListener(this)
 	}
 
@@ -107,6 +110,7 @@ class HomeFragment : StdRowsFragment(), AudioEventListener {
 	}
 
 	override fun setupQueries(rowLoader: IRowLoader) {
+
 		lifecycleScope.launch(Dispatchers.IO) {
 			val currentUser = TvApp.getApplication()!!.currentUser!!
 			// Update the views before creating rows

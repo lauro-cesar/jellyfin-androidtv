@@ -3,6 +3,7 @@ plugins {
 	kotlin("android")
 	kotlin("plugin.serialization") version Plugins.Versions.kotlin
 	kotlin("kapt")
+    id("kotlin-android")
 }
 
 android {
@@ -129,6 +130,8 @@ dependencies {
 
 	// Image utility
 	implementation(libs.glide.core)
+	implementation("androidx.appcompat:appcompat:1.3.1")
+	implementation("com.google.android.material:material:1.4.0")
 	kapt(libs.glide.compiler)
 	implementation(libs.kenburnsview)
 

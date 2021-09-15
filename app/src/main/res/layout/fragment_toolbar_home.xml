@@ -32,7 +32,8 @@
                 android:layout_height="41dp"
                 android:contentDescription="@string/lbl_switch_user"
                 android:duplicateParentState="true"
-                android:src="@drawable/ic_switch_users" />
+                android:src="@drawable/ic_switch_users"
+                android:visibility="invisible" />
 
             <ImageButton
                 android:id="@+id/switch_users_image"

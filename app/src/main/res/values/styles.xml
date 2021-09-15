@@ -59,4 +59,13 @@
         <item name="android:paddingEnd">4dp</item>
         <item name="android:minHeight">4dp</item>
     </style>
+
+    <style name="Widget.Theme.Jellyfin.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="Widget.Theme.Jellyfin.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
 </resources>

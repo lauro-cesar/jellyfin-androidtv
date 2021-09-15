@@ -6,12 +6,12 @@
 
     <ImageView
         android:id="@+id/fragment_startup_logo"
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:contentDescription="TODO"
-        android:src="@drawable/app_logo"
-        android:visibility="invisible"
+        android:src="@mipmap/ic_banner_foreground"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -378,7 +378,7 @@
     <string name="connect_title">Ligar</string>
     <string name="login_help_description">O Jellyfin precisa de um servidor para se ligar. Visita a nossa documentação em docs.jellyfin.org para começar com o Jellyfin.</string>
     <string name="login_help_title">Precisa de ajuda\?</string>
-    <string name="connect_manually_by_address">Introduzir email</string>
+    <string name="connect_manually_by_address">Introduzir servidor</string>
     <string name="connect_manually_title">Ligar manualmente</string>
     <string name="discovered_servers_empty">Servidores não encontrados na rede local.</string>
     <string name="discovered_servers_title">Servidores encontrados</string>

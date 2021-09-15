@@ -251,7 +251,7 @@ public class BrowseViewFragment extends EnhancedBrowseFragment {
                 break;
             case "livetv":
                 isLiveTvLibrary = true;
-                showViews = true;
+                showViews = false;
 
                 //On now
                 RecommendedProgramQuery onNow = new RecommendedProgramQuery();
@@ -464,22 +464,22 @@ public class BrowseViewFragment extends EnhancedBrowseFragment {
     protected void addAdditionalRows(ArrayObjectAdapter rowAdapter) {
         if (isLiveTvLibrary) {
             //Views row
-            HeaderItem gridHeader = new HeaderItem(mRowsAdapter.size(), TvApp.getApplication().getString(R.string.lbl_views));
+//            HeaderItem gridHeader = new HeaderItem(mRowsAdapter.size(), TvApp.getApplication().getString(R.string.lbl_views));
 
             GridButtonPresenter mGridPresenter = new GridButtonPresenter();
             ArrayObjectAdapter gridRowAdapter = new ArrayObjectAdapter(mGridPresenter);
-            gridRowAdapter.add(new GridButton(
-                TvApp.LIVE_TV_GUIDE_OPTION_ID,
-                TvApp.getApplication().getResources().getString(R.string.lbl_live_tv_guide),
-                R.drawable.tile_port_guide,
-                null
-            ));
-            gridRowAdapter.add(new GridButton(
-                TvApp.LIVE_TV_RECORDINGS_OPTION_ID,
-                TvApp.getApplication().getResources().getString(R.string.lbl_recorded_tv),
-                R.drawable.tile_port_record,
-                null
-            ));
+//            gridRowAdapter.add(new GridButton(
+//                TvApp.LIVE_TV_GUIDE_OPTION_ID,
+//                TvApp.getApplication().getResources().getString(R.string.lbl_live_tv_guide),
+//                R.drawable.tile_port_guide,
+//                null
+//            ));
+//            gridRowAdapter.add(new GridButton(
+//                TvApp.LIVE_TV_RECORDINGS_OPTION_ID,
+//                TvApp.getApplication().getResources().getString(R.string.lbl_recorded_tv),
+//                R.drawable.tile_port_record,
+//                null
+//            ));
             if (TvApp.getApplication().canManageRecordings()) {
                 gridRowAdapter.add(new GridButton(
                     TvApp.LIVE_TV_SCHEDULE_OPTION_ID,
@@ -495,7 +495,7 @@ public class BrowseViewFragment extends EnhancedBrowseFragment {
                 ));
             }
 
-            mRowsAdapter.add(new ListRow(gridHeader, gridRowAdapter));
+//            mRowsAdapter.add(new ListRow(gridHeader, gridRowAdapter));
 
         } else {
             super.addAdditionalRows(rowAdapter);

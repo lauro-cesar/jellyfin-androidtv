@@ -12,7 +12,8 @@ buildscript {
 	dependencies {
 		classpath(Plugins.androidBuildTools)
 		classpath(Plugins.kotlin)
-	}
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30")
+    }
 }
 
 

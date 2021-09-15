@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
@@ -13,23 +14,23 @@
         android:alpha=".6" />
 
     <org.jellyfin.androidtv.ui.ObservableScrollView
+        android:id="@+id/channelScroller"
         android:layout_width="160sp"
         android:layout_height="match_parent"
-        android:id="@+id/channelScroller"
         android:layout_gravity="top|start|center"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="20sp"
         android:background="@color/channel_scroller_bg"
-        android:layout_marginTop="305dp"
         android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:layout_marginBottom="20sp">
+        android:focusableInTouchMode="false">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:id="@+id/channels"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:id="@+id/channels"/>
+            android:orientation="vertical" />
     </org.jellyfin.androidtv.ui.ObservableScrollView>
 
     <org.jellyfin.androidtv.ui.ObservableScrollView
@@ -164,6 +165,17 @@
         android:textSize="12sp"
         android:textColor="@color/gray_gradient_end"
         android:fontFamily="sans-serif-light" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_banner_foreground" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"

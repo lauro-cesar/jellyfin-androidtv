@@ -116,6 +116,10 @@ public class LiveTvGuideActivity extends BaseActivity implements ILiveTvGuide {
     private Lazy<ApiClient> apiClient = inject(ApiClient.class);
 
     @Override
+    public void onBackPressed() {
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -132,7 +136,7 @@ public class LiveTvGuideActivity extends BaseActivity implements ILiveTvGuide {
         mFilterStatus.setTextColor(Color.GRAY);
         mInfoRow = findViewById(R.id.infoRow);
         mImage = findViewById(R.id.programImage);
-        mBackdrop = findViewById(R.id.backdrop);
+        mBackdrop = findViewById(R.id.backdrops);
         mChannels = findViewById(R.id.channels);
         mTimeline = findViewById(R.id.timeline);
         mProgramRows = findViewById(R.id.programRows);
@@ -218,6 +222,7 @@ public class LiveTvGuideActivity extends BaseActivity implements ILiveTvGuide {
                 if (message.equals(CustomMessage.ActionComplete)) dismissProgramOptions();
             }
         });
+
     }
 
     private int getGuideHours() {

@@ -13,8 +13,10 @@
             android:layout_width="41dp"
             android:layout_height="41dp"
             android:padding="4dp"
-            android:src="@drawable/ic_user"
-            android:visibility="invisible" />
+            android:src="@mipmap/logo_china"
+            android:visibility="invisible"
+            tools:src="@mipmap/logo_china"
+            android:contentDescription="TODO" />
 
         <TextClock
             android:id="@+id/clock"

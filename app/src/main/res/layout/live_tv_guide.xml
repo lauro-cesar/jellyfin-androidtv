@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layerType="software"
+    android:visibility="visible"
+   >
 
     <org.jellyfin.androidtv.ui.ObservableScrollView
         android:id="@+id/channelScroller"
@@ -108,7 +111,7 @@
     <ImageView
         android:id="@+id/programImage"
         android:layout_width="150sp"
-        android:layout_height="15sp"
+        android:layout_height="150sp"
         android:layout_gravity="left|top"
         android:layout_marginStart="15sp"
         android:layout_marginTop="15sp"

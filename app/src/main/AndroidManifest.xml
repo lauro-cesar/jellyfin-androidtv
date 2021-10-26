@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.jellyfin.androidtv">
-
     <!-- Android TV Integration -->
     <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" /> <!-- AccountManager permissions -->
     <uses-permission
@@ -40,6 +39,28 @@
         android:theme="@style/Theme.Jellyfin"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".ui.browsing.UserSelectionActivity"
+            android:exported="true"
+            android:label="@string/title_activity_user_selection"
+            android:theme="@style/Theme.Jellyfin.NoActionBar" />
+        <activity
+            android:name=".FullscreenMainWelcomeScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/title_activity_fullscreen_main_welcome_screen"
+            android:theme="@style/Theme.Jellyfin.Fullscreen" />
+        <activity
+            android:name=".MainFullScreenWelcomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main_full_screen_welcome"
+            android:theme="@style/Theme.Jellyfin.NoActionBar" />
+        <activity
+            android:name=".MainWelcomeScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/title_activity_main_welcome_screen"
+            android:theme="@style/Theme.Jellyfin.Fullscreen" />
         <activity
             android:name=".ui.WelcomeScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

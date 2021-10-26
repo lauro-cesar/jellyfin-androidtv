@@ -72,6 +72,9 @@ android {
 	}
 	buildToolsVersion = "29.0.2"
 	ndkVersion = "20.0.5594570"
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 val versionTxt by tasks.registering {
@@ -132,7 +135,10 @@ dependencies {
 	implementation(libs.glide.core)
 	implementation("androidx.appcompat:appcompat:1.3.1")
 	implementation("com.google.android.material:material:1.4.0")
-	kapt(libs.glide.compiler)
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+    kapt(libs.glide.compiler)
 	implementation(libs.kenburnsview)
 
 	// Crash Reporting

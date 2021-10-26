@@ -56,8 +56,6 @@ class HomeFragment : StdRowsFragment(), AudioEventListener {
 		mediaManager.addAudioEventListener(this)
 
 
-
-
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -105,6 +103,7 @@ class HomeFragment : StdRowsFragment(), AudioEventListener {
 				rows.add(liveTVRow)
 				rows.add(helper.loadOnNow())
 			}
+
 			HomeSectionType.NONE -> Unit
 		}
 	}

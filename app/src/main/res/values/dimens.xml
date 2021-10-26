@@ -12,4 +12,5 @@
     <fraction name="lb_focus_zoom_factor_xsmall">@fraction/card_scale_focus</fraction>
     <fraction name="lb_focus_zoom_factor_medium">@fraction/card_scale_focus</fraction>
     <fraction name="lb_focus_zoom_factor_large">@fraction/card_scale_focus</fraction>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
